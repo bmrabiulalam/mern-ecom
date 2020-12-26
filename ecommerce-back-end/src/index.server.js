@@ -1,6 +1,5 @@
 const express = require('express');
 const env = require('dotenv');
-const path = require('path');
 const app = express();
 const mongoose = require('mongoose');
 
