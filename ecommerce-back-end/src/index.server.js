@@ -23,9 +23,9 @@ mongoose.connect(
         useUnifiedTopology: true,
         useCreateIndex: true
     }
-).then(() => {
-    console.log('Database Connected');
-});
+).then(() => console.log('Database Connected!'), 
+       () => console.log('Database oould not connect! Please check your network connection.')
+);
  
 app.use(express.json());
 app.use('/public', express.static(path.join(__dirname, 'uploads')));
